@@ -1,11 +1,21 @@
 {
-  "name": "ui-playground",
+  "name": "ui-kit-testing-ground",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "@styled-system/theme-get": "^5.1.2",
+    "@windsor/ui-kit-core": "0.0.15",
+    "@windsor/ui-kit-styled-system": "0.0.15",
+    "@windsor/ui-kit-theme": "0.0.15",
+    "color": "^3.1.2",
+    "emotion": "^10.0.17",
+    "emotion-theming": "^10.0.19",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.1.2",
+    "styled-system": "^5.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
