@@ -24,13 +24,8 @@ baseColors.neutral = baseColors.darkBlueGray;
 baseColors.success = baseColors.green;
 baseColors.error = baseColors.red;
 
-const colors = createColors({ options: {colors: baseColors} });
-
 const theme = createTheme({
-  colors,
+  colors: baseColors,
 });
 
-console.log(theme);
-
 export default theme;
-

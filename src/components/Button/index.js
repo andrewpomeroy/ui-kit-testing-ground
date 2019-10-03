@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
-import { borders, fontWeight, variant } from 'styled-system';
+import { borders, fontWeight } from 'styled-system';
+import { color } from '@windsor/ui-kit-styled-system';
 import buttonSize from './buttonSize';
 import buttonShape from './buttonShape';
 import buttonAppearance from './buttonAppearance';
@@ -10,9 +11,9 @@ const transitionDuration = 50;
 const StyledButton = styled.button`
   position: relative;
   color: inherit;
+  padding: .9em 1.5em;
   border: 0;
   border: 2px solid;
-  padding: .9em 1.5em;
   ${borders}
   ${fontWeight}
   transition: border-color ${transitionDuration}ms linear,
@@ -33,6 +34,7 @@ const StyledButton = styled.button`
   ${buttonAppearance}
   ${buttonShape}
   ${buttonSize}
+  ${color}
 `
 StyledButton.defaultProps = {
   variant: 'neutral',

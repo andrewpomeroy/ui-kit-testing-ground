@@ -80,6 +80,8 @@ function App() {
                   <Button variant="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button variant="danger">Danger</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button variant="pink">Pink!?</Button>
                 </Flex>
                 <Flex mb={10}>
                   <Button shape="rounded" variant="neutral"
@@ -91,6 +93,8 @@ function App() {
                   <Button shape="rounded" variant="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button shape="rounded" variant="danger">Danger</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button shape="rounded" variant="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
@@ -103,6 +107,8 @@ function App() {
                   <Button appearance="hollow" variant="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button appearance="hollow" variant="danger">Danger</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button appearance="hollow" variant="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
@@ -115,6 +121,8 @@ function App() {
                   <Button appearance="text" variant="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button appearance="text" variant="danger">Danger</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button appearance="text" variant="pink">Pink!?</Button>
                 </Flex>
               </Background>
             </AppCenterColumn>
