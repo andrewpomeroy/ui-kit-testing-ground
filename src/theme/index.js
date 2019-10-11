@@ -2,7 +2,8 @@ import createTheme from "@windsor/ui-kit-theme";
 import Color from 'color';
 
 export const baseColors = {
-  yellow: '#f6f9d0',
+  // yellow: '#f6f9d0',
+  yellow: '#ffc30f',
   blue: '#2b88fe',
   turquoise: '#5df0f6',
   green: '#2be689',
@@ -12,7 +13,9 @@ export const baseColors = {
   fadedBlue: '#5b86b0',
   veryDarkBlue: '#16427d',
   violet: 'hsl(219.2, 100%, 64.6%)',
-  red: '#fa5252',
+  // red: '#fa5252',
+  red: '#ff3558',
+  pink: '#ff3c7e',
   nearWhite: '#f8f9fa',
   mediumGray: '#929292',
   white: '#ffffff'
@@ -23,6 +26,7 @@ baseColors.danger = baseColors.red;
 baseColors.neutral = baseColors.darkBlueGray;
 baseColors.success = baseColors.green;
 baseColors.error = baseColors.red;
+baseColors.warning = baseColors.yellow;
 baseColors.link = baseColors.violet;
 
 const buttonSizes = {

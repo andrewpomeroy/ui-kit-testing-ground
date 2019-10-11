@@ -85,6 +85,8 @@ function App() {
                   <div style={{marginRight: '1em'}}></div>
                   <Button buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
+                  <Button buttonColor="warning">Warning</Button>
+                  <div style={{marginRight: '1em'}}></div>
                   <Button buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Flex mb={10}>
@@ -97,6 +99,8 @@ function App() {
                   <Button shape="rounded" buttonColor="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button shape="rounded" buttonColor="danger">Danger</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button shape="rounded" buttonColor="warning">Warning</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button shape="rounded" buttonColor="pink">Pink!?</Button>
                 </Flex>
@@ -112,6 +116,8 @@ function App() {
                   <div style={{marginRight: '1em'}}></div>
                   <Button buttonStyle="hollow" buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
+                  <Button buttonStyle="hollow" buttonColor="warning">Warning</Button>
+                  <div style={{marginRight: '1em'}}></div>
                   <Button buttonStyle="hollow" buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
@@ -125,6 +131,8 @@ function App() {
                   <Button buttonStyle="text" buttonColor="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button buttonStyle="text" buttonColor="danger">Danger</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button buttonStyle="text" buttonColor="warning">Warning</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button buttonStyle="text" buttonColor="pink">Pink!?</Button>
                 </Flex>
