@@ -12,6 +12,7 @@ const BasicButton = styled.button`
   position: relative;
   color: inherit;
   padding: .9em 1.5em;
+  line-height: 1em;
   border: 0;
   border: 2px solid;
   ${borders}

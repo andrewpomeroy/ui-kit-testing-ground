@@ -6,6 +6,7 @@ import { ThemeProvider } from 'emotion-theming';
 import { Box, Flex } from '@windsor/ui-kit-core';
 import theme from './theme';
 import Button from './components/Button/index.js';
+import Input from './components/Input';
 
 console.log(theme);
 
@@ -68,6 +69,9 @@ function App() {
                   <div style={{marginRight: '1em'}}></div>
                   <Button
                     size="large">Large</Button>
+                  <div style={{marginRight: '1em'}}></div>
+                  <Button
+                    size="larger">Larger</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
@@ -123,6 +127,12 @@ function App() {
                   <Button buttonStyle="text" buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button buttonStyle="text" buttonColor="pink">Pink!?</Button>
+                </Flex>
+                <Flex mb={10}>
+                  <Input />
+                  <Box mr="1em" />
+                  <Button
+                    buttonColor="primary">Primary</Button>
                 </Flex>
               </Background>
             </AppCenterColumn>
