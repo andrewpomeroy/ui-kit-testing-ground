@@ -3,15 +3,18 @@ import { variant } from 'styled-system';
 const buttonSize = (props) => variant({
   prop: 'size',
   variants: {
-    small: {
-      fontSize: 0,
-    },
-    default: {
-      fontSize: 1
-    },
-    large: {
-      fontSize: 2
-    }
+    ...props.theme.buttonSizes
+    // small: {
+    //   fontSize: 0,
+    //   paddingY: "10px",
+    //   paddingX: "16px"
+    // },
+    // default: {
+    //   fontSize: 1
+    // },
+    // large: {
+    //   fontSize: 2
+    // }
   }
 })
 

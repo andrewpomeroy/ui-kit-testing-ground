@@ -3,7 +3,7 @@ import './App.scss';
 import styled from '@emotion/styled/macro';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import { Box, Flex, BorderBox } from '@windsor/ui-kit-core';
+import { Box, Flex } from '@windsor/ui-kit-core';
 import theme from './theme';
 import Button from './components/Button/index.js';
 
@@ -71,58 +71,58 @@ function App() {
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
-                  <Button variant="neutral"
+                  <Button buttonColor="neutral"
                     >Neutral</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button
-                    variant="primary">Primary</Button>
+                    buttonColor="primary">Primary</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button variant="success">Success</Button>
+                  <Button buttonColor="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button variant="danger">Danger</Button>
+                  <Button buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button variant="pink">Pink!?</Button>
+                  <Button buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Flex mb={10}>
-                  <Button shape="rounded" variant="neutral"
+                  <Button shape="rounded" buttonColor="neutral"
                     >Neutral</Button>
                   <div style={{marginRight: '1em'}}></div>
                   <Button
-                    shape="rounded" variant="primary">Primary</Button>
+                    shape="rounded" buttonColor="primary">Primary</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button shape="rounded" variant="success">Success</Button>
+                  <Button shape="rounded" buttonColor="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button shape="rounded" variant="danger">Danger</Button>
+                  <Button shape="rounded" buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button shape="rounded" variant="pink">Pink!?</Button>
+                  <Button shape="rounded" buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
-                  <Button appearance="hollow" variant="neutral"
+                  <Button buttonStyle="hollow" buttonColor="neutral"
                     >Neutral</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="hollow"
-                    variant="primary">Primary</Button>
+                  <Button buttonStyle="hollow"
+                    buttonColor="primary">Primary</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="hollow" variant="success">Success</Button>
+                  <Button buttonStyle="hollow" buttonColor="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="hollow" variant="danger">Danger</Button>
+                  <Button buttonStyle="hollow" buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="hollow" variant="pink">Pink!?</Button>
+                  <Button buttonStyle="hollow" buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
-                  <Button appearance="text" variant="neutral"
+                  <Button buttonStyle="text" buttonColor="neutral"
                     >Neutral</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="text"
-                    variant="primary">Primary</Button>
+                  <Button buttonStyle="text"
+                    buttonColor="primary">Primary</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="text" variant="success">Success</Button>
+                  <Button buttonStyle="text" buttonColor="success">Success</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="text" variant="danger">Danger</Button>
+                  <Button buttonStyle="text" buttonColor="danger">Danger</Button>
                   <div style={{marginRight: '1em'}}></div>
-                  <Button appearance="text" variant="pink">Pink!?</Button>
+                  <Button buttonStyle="text" buttonColor="pink">Pink!?</Button>
                 </Flex>
               </Background>
             </AppCenterColumn>

@@ -4,11 +4,11 @@ import { borders, fontWeight } from 'styled-system';
 import { color } from '@windsor/ui-kit-styled-system';
 import buttonSize from './buttonSize';
 import buttonShape from './buttonShape';
-import buttonAppearance from './buttonAppearance';
+import buttonStyle from './buttonStyle';
 
 const transitionDuration = 50;
 
-const StyledButton = styled.button`
+const BasicButton = styled.button`
   position: relative;
   color: inherit;
   padding: .9em 1.5em;
@@ -31,16 +31,19 @@ const StyledButton = styled.button`
   &:not([disabled]) {
     cursor: pointer;
   }
-  ${buttonAppearance}
-  ${buttonShape}
+`
+
+const StyledButton = styled(BasicButton)`
+  ${buttonStyle}
   ${buttonSize}
+  ${buttonShape}
   ${color}
 `
 StyledButton.defaultProps = {
-  variant: 'neutral',
+  buttonColor: 'neutral',
   size: 'default',
   shape: 'default',
-  appearance: 'default'
+  buttonStyle: 'default'
 }
 
 const Button = ({isDisabled, children, ...props}) => {
