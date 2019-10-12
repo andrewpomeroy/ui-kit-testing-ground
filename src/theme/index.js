@@ -34,7 +34,7 @@ const buttonSizes = {
     fontSize: "13px",
     lineHeight: "14px",
     paddingY: "8px",
-    paddingX: "17px"
+    paddingX: "17px",
   },
   default: {
     fontSize: "14px",

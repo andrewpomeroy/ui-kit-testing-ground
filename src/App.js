@@ -5,8 +5,9 @@ import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import { Box, Flex } from '@windsor/ui-kit-core';
 import theme from './theme';
-import Button from './components/Button/index.js';
+import Button, { IconButton, IconButtonSolo } from './components/Button/index.js';
 import Input from './components/Input';
+import Icon from '@windsor/ui-kit-icons';
 
 console.log(theme);
 
@@ -141,6 +142,12 @@ function App() {
                   <Box mr="1em" />
                   <Button
                     buttonColor="primary">Primary</Button>
+                </Flex>
+                <Flex mb={10}>
+                  <IconButton iconRight={<Icon name="ChevronCircle" />}>Next</IconButton>
+                  <Box mr="1em" />
+                  <IconButton iconLeft={<Icon name="User" />}>Profile</IconButton>
+                  <Box mr="1em" />
                 </Flex>
               </Background>
             </AppCenterColumn>
