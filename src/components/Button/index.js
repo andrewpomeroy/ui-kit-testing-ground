@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
-import { borders, fontWeight, variant } from 'styled-system';
+import { borders, fontWeight } from 'styled-system';
 import themeGet from '@styled-system/theme-get';
-import { color, alignItems } from '@windsor/ui-kit-styled-system';
+import { color, alignItems, justifyContent } from '@windsor/ui-kit-styled-system';
 import buttonSize from './buttonSize';
 import buttonShape from './buttonShape';
 import buttonStyle from './buttonStyle';
@@ -13,9 +13,12 @@ const BasicButton = styled.button`
   display: inline-flex;
   position: relative;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   ${alignItems}
+  ${justifyContent}
   padding: .9em 1.5em;
-  border: 2px solid;
+  border: 1px solid;
   ${borders}
   line-height: 1em;
   ${fontWeight}
@@ -38,18 +41,19 @@ const BasicButton = styled.button`
 `
 
 const StyledButton = styled(BasicButton)`
+  border: ${themeGet("buttons.borderWidth")}px solid;
   ${buttonStyle}
   ${buttonSize}
   ${buttonShape}
   ${color}
 `
 StyledButton.defaultProps = {
+  buttonBorder: 'default',
   buttonColor: 'neutral',
   size: 'default',
   shape: 'default',
   buttonStyle: 'default'
 }
-
 const Button = ({isDisabled, children, ...props}) => {
   return (
     <StyledButton
@@ -107,4 +111,22 @@ export const IconButton = ({children, iconRight, iconLeft, offsetX, ButtonCompon
 IconButton.defaultProps = {
   ButtonComponent: Button
 }
+
+export const SoloIconButton = ({children, ...props}) => {
+  return (
+  <Button equilateral={true} {...props}>
+    <IconButtonIconWrap>
+      {children}
+    </IconButtonIconWrap>
+  </Button>
+)}
+  
+// export const SoloIconButton = {...props,} => (
+//   <StyledButton>
+
+//   </StyledButton>
+// )
+// export const SoloIconButton = props => IconButtonSoloStyle({...props, equilateral: true})
+
+
 export default Button;

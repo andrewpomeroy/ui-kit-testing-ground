@@ -5,7 +5,7 @@ import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import { Box, Flex } from '@windsor/ui-kit-core';
 import theme from './theme';
-import Button, { IconButton, IconButtonSolo } from './components/Button/index.js';
+import Button, { IconButton, SoloIconButton } from './components/Button/index.js';
 import Input from './components/Input';
 import Icon from '@windsor/ui-kit-icons';
 
@@ -143,11 +143,22 @@ function App() {
                   <Button
                     buttonColor="primary">Primary</Button>
                 </Flex>
-                <Flex mb={10}>
+                <Flex mb={10} alignItems="flex-end">
                   <IconButton iconRight={<Icon name="ChevronCircle" />}>Next</IconButton>
                   <Box mr="1em" />
                   <IconButton iconLeft={<Icon name="User" />}>Profile</IconButton>
                   <Box mr="1em" />
+                  <SoloIconButton size="small"><Icon name="X"/></SoloIconButton>
+                  <Box mr="1em" />
+                  <SoloIconButton shape="rounded" size="small"><Icon name="X" /></SoloIconButton>
+                  <Box mr="1em" />
+                  <SoloIconButton shape="rounded" size="default"><Icon name="X" /></SoloIconButton>
+                  <Box mr="1em" />
+                  <SoloIconButton shape="rounded" size="large"><Icon name="X" /></SoloIconButton>
+                  <Box mr="1em" />
+                  <SoloIconButton shape="rounded" size="larger"><Icon name="X" /></SoloIconButton>
+                  <Box mr="1em" />
+                  <SoloIconButton shape="rounded" size="larger" buttonStyle="text" color="grey.500"><Icon name="X" /></SoloIconButton>
                 </Flex>
               </Background>
             </AppCenterColumn>

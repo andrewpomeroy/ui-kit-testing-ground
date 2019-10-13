@@ -7,7 +7,7 @@ import { px } from '@windsor/ui-kit-styled-system';
 const getExtraRoundedPaddingX = (props) => {
   const paddingX = !!props.theme && !!props.theme.buttonSizes && !!props.size && !!props.theme.buttonSizes[props.size] && props.theme.buttonSizes[props.size].paddingX;
   if (paddingX !== false) {
-    return px(parseInt(paddingX, 10) * 1.25);
+    return parseInt(paddingX, 10) * 1.25;
   }
   return undefined; 
 }
@@ -20,8 +20,8 @@ const buttonShape = props => variant({
     },
     rounded: {
       borderRadius: '999px',
-      paddingLeft: getExtraRoundedPaddingX(props),
-      paddingRight: getExtraRoundedPaddingX(props),
+      paddingLeft: props.equilateral ? null : px(getExtraRoundedPaddingX(props)),
+      paddingRight: props.equilateral ? null : px(getExtraRoundedPaddingX(props)),
     },
     square: {
       borderRadius: 0

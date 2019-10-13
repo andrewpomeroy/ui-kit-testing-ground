@@ -29,30 +29,6 @@ baseColors.error = baseColors.red;
 baseColors.warning = baseColors.yellow;
 baseColors.link = baseColors.violet;
 
-const buttonSizes = {
-  small: {
-    fontSize: "13px",
-    lineHeight: "14px",
-    paddingY: "8px",
-    paddingX: "17px",
-  },
-  default: {
-    fontSize: "14px",
-    paddingY: "11px",
-    paddingX: "19px"
-  },
- large: {
-    fontSize: "16px",
-    paddingY: "13px",
-    paddingX: "24px"
-  },
-  larger: {
-    fontSize: "18px",
-    paddingY: "14px",
-    paddingX: "28px"
-  },
-}
-
 const theme = createTheme({
   colors: baseColors,
 });
@@ -80,9 +56,42 @@ otherColors.listBackground = baseColors.nearWhite;
 otherColors.transparentHighlight = Color(baseColors.blue).saturationl(100).lightness(98).string();
 otherColors.lightSeparator = 'gainsboro';
 
+const buttons = {
+  borderWidth: 1,
+  lineHeight: 1.2
+}
+
+const buttonSizes = {
+  small: {
+    fontSize: 13,
+    lineHeight: 14,
+    paddingY: 8,
+    paddingX: 17,
+    height: 34,
+  },
+  default: {
+    fontSize: 14,
+    paddingY: 11,
+    paddingX: 19,
+    height: 40,
+  },
+ large: {
+    fontSize: 16,
+    paddingY: 13,
+    paddingX: 24,
+    height: 46,
+  },
+  larger: {
+    fontSize: 18,
+    paddingY: 14,
+    paddingX: 28,
+    height: 52
+  },
+}
 
 const extendedTheme = {
   ...theme,
+  buttons,
   buttonSizes,
 }
 
