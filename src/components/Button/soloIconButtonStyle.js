@@ -16,6 +16,16 @@ const soloIconButtonStyle = props => {
         borderColor: getThemeColor(`${props.buttonColor}.A200`)(props),
       }
     },
+    hollow: {
+      color: getThemeColor(`${props.buttonColor}.500`)(props),
+      borderColor: getThemeColor(`${props.buttonColor}.500`)(props),
+      backgroundColor: "transparent",
+      '&:hover, &:focus': {
+        color: getThemeColor(`white.500`)(props),
+        backgroundColor: getThemeColor(`${props.buttonColor}.500`)(props),
+        borderColor: getThemeColor(`${props.buttonColor}.500`)(props),
+      }
+    },
   }
 })}
 

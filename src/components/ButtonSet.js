@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
 
-const ButtonGroupStyle = styled.div`
+const ButtonSetStyle = styled.div`
   display: flex;
   flex-direction: row;
   & > *:active {
@@ -10,10 +10,10 @@ const ButtonGroupStyle = styled.div`
   }
 `
 
-const ButtonGroup = ({children, ...props}) => {
+const ButtonSet = ({children, ...props}) => {
   console.log()
   return (
-    <ButtonGroupStyle>
+    <ButtonSetStyle>
       {children && children.length 
         ? children.map((child, index) => {
           const isFirst = index === 0;
@@ -33,7 +33,7 @@ const ButtonGroup = ({children, ...props}) => {
         })
         : children
       }
-    </ButtonGroupStyle>);
+    </ButtonSetStyle>);
 }
 
-export default ButtonGroup;
+export default ButtonSet;

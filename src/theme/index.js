@@ -3,7 +3,8 @@ import Color from 'color';
 
 export const baseColors = {
   // yellow: '#f6f9d0',
-  yellow: '#ffc30f',
+  // yellow: '#ffc30f',
+  yellow: '#ffd945',
   blue: '#2b88fe',
   turquoise: '#5df0f6',
   green: '#2be689',

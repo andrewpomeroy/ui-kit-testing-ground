@@ -8,7 +8,7 @@ import theme from './theme';
 import Button, { IconButton, SoloIconButton } from './components/Button/index.js';
 import Input from './components/Input';
 import Icon from '@windsor/ui-kit-icons';
-import ButtonGroup from './components/ButtonGroup';
+import ButtonSet from './components/ButtonSet';
 
 console.log(theme);
 
@@ -162,30 +162,30 @@ function App() {
                   <SoloIconButton size="larger" buttonStyle="ghost" buttonColor="neutral"><Icon name="X" /></SoloIconButton>
                 </Flex>
                 <Flex mb={10} alignItems="flex-end">
-                  <ButtonGroup>
+                  <ButtonSet>
                     <Button buttonStyle="hollow" buttonColor="neutral"
                     >Neutral</Button>
                     <Button buttonStyle="hollow" buttonColor="neutral"
                     >Neutral</Button>
-                  </ButtonGroup>
+                  </ButtonSet>
                   <Box mr="1em"></Box>
-                  <ButtonGroup>
+                  <ButtonSet>
                     <Button buttonStyle="hollow" buttonColor="primary"
                     >Primary</Button>
                     <Button buttonStyle="hollow" buttonColor="neutral"
                     >Neutral</Button>
                     <Button buttonStyle="hollow" buttonColor="danger"
                     >Danger</Button>
-                  </ButtonGroup>
+                  </ButtonSet>
                   <Box mr="1em"></Box>
-                  <ButtonGroup>
+                  <ButtonSet>
                     <Button buttonColor="primary"
                     >Primary</Button>
                     <Button buttonColor="neutral"
                     >Neutral</Button>
                     <Button buttonColor="danger"
                     >Danger</Button>
-                  </ButtonGroup>
+                  </ButtonSet>
                 </Flex>
               </Background>
             </AppCenterColumn>
