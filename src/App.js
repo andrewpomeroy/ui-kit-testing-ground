@@ -9,6 +9,7 @@ import Button, { IconButton, SoloIconButton } from './components/Button/index.js
 import Input from './components/Input';
 import Icon from '@windsor/ui-kit-icons';
 import ButtonSet from './components/ButtonSet';
+import ToggleButtons, { ToggleButton } from './components/ToggleButtons';
 
 console.log(theme);
 
@@ -186,6 +187,13 @@ function App() {
                     <Button buttonColor="danger"
                     >Danger</Button>
                   </ButtonSet>
+                </Flex>
+                <Flex mb={10} alignItems="flex-end">
+                  <ToggleButtons name="toggleButtons" intialValue={1}>
+                    <ToggleButton value={1}>Toggle Button 1</ToggleButton>
+                    <ToggleButton value={2}>Toggle Button 2</ToggleButton>
+                    <ToggleButton value={3}>Toggle Button 3</ToggleButton>
+                  </ToggleButtons>
                 </Flex>
               </Background>
             </AppCenterColumn>
