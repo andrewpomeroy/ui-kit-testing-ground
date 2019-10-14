@@ -6,6 +6,7 @@ import { color, alignItems, justifyContent } from '@windsor/ui-kit-styled-system
 import buttonSize from './buttonSize';
 import buttonShape from './buttonShape';
 import buttonStyle from './buttonStyle';
+import soloIconButtonStyle from './soloIconButtonStyle';
 
 const transitionDuration = 50;
 
@@ -48,11 +49,10 @@ const StyledButton = styled(BasicButton)`
   ${color}
 `
 StyledButton.defaultProps = {
-  buttonBorder: 'default',
   buttonColor: 'neutral',
   size: 'default',
-  shape: 'default',
-  buttonStyle: 'default'
+  shape: 'soft',
+  buttonStyle: 'solid'
 }
 const Button = ({isDisabled, children, ...props}) => {
   return (
@@ -112,7 +112,8 @@ IconButton.defaultProps = {
   ButtonComponent: Button
 }
 
-export const SoloIconButton = ({children, ...props}) => {
+
+export const SoloIconButtonInner = ({children, ...props}) => {
   return (
   <Button equilateral={true} {...props}>
     <IconButtonIconWrap>
@@ -120,6 +121,14 @@ export const SoloIconButton = ({children, ...props}) => {
     </IconButtonIconWrap>
   </Button>
 )}
+export const SoloIconButton = styled(SoloIconButtonInner)`
+  ${soloIconButtonStyle}
+`
+SoloIconButton.defaultProps = {
+  buttonStyle: 'ghost',
+  buttonColor: 'primary',
+  shape: 'rounded'
+}
   
 // export const SoloIconButton = {...props,} => (
 //   <StyledButton>

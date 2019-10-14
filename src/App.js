@@ -148,17 +148,17 @@ function App() {
                   <Box mr="1em" />
                   <IconButton iconLeft={<Icon name="User" />}>Profile</IconButton>
                   <Box mr="1em" />
-                  <SoloIconButton size="small"><Icon name="X"/></SoloIconButton>
+                  <SoloIconButton size="small" buttonStyle="hollow" shape="soft"><Icon name="X"/></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton shape="rounded" size="small"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="small" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton shape="rounded" size="default"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="default" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton shape="rounded" size="large"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="large" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton shape="rounded" size="larger"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="larger" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton shape="rounded" size="larger" buttonStyle="text" color="grey.500"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="larger" buttonStyle="ghost" buttonColor="neutral"><Icon name="X" /></SoloIconButton>
                 </Flex>
               </Background>
             </AppCenterColumn>

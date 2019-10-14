@@ -15,7 +15,7 @@ const getExtraRoundedPaddingX = (props) => {
 const buttonShape = props => variant({
   prop: 'shape',
   variants: {
-    default: {
+    soft: {
       borderRadius: '5px'
     },
     rounded: {

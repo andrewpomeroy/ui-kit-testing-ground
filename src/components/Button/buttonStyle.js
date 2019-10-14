@@ -6,7 +6,7 @@ const buttonStyle = props => {
   return variant({
   prop: 'buttonStyle',
   variants: {
-    default: {
+    solid: {
       fontWeight: 500,
       // backgroundColor: themeGet(`colors.${props.buttonColor}.600.hex`)(props),
       // borderColor: themeGet(`colors.${props.buttonColor}.600.hex`)(props),
