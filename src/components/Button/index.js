@@ -55,7 +55,6 @@ const ButtonNormalized = styled.button`
 `
 
 const ButtonThemed = styled(ButtonNormalized)`
-  border: ${themeGet("buttons.borderWidth")}px solid;
   ${buttonStyle}
   ${buttonSize}
   ${buttonShape}
@@ -64,7 +63,7 @@ const ButtonThemed = styled(ButtonNormalized)`
 
 ButtonThemed.defaultProps = {
   buttonColor: 'neutral',
-  size: 'default',
+  size: 'medium',
   shape: 'soft',
   buttonStyle: 'solid'
 }
@@ -149,6 +148,7 @@ export const SoloIconButton = styled(SoloIconButtonInner)`
 `
 
 SoloIconButton.defaultProps = {
+  buttonSize: 'medium',
   buttonStyle: 'ghost',
   buttonColor: 'primary',
   shape: 'rounded'

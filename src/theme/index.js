@@ -57,43 +57,75 @@ otherColors.listBackground = baseColors.nearWhite;
 otherColors.transparentHighlight = Color(baseColors.blue).saturationl(100).lightness(98).string();
 otherColors.lightSeparator = 'gainsboro';
 
-const buttons = {
-  borderWidth: 1,
-  lineHeight: 1.2
+const defaultOpts = {
+  defaults: {
+    borderWidth: 1,
+    lineHeight: 1.2,
+  },
+  sizes: {
+    small: {
+      fontSize: 13,
+      paddingX: 17,
+      height: 34,
+    },
+    medium: {
+      fontSize: 14,
+      paddingX: 19,
+      height: 40,
+    },
+    large: {
+      fontSize: 16,
+      paddingX: 24,
+      height: 46,
+    },
+    larger: {
+      fontSize: 18,
+      paddingX: 28,
+      height: 52
+    },
+  }
 }
 
-const buttonSizes = {
-  small: {
-    fontSize: 13,
-    lineHeight: 14,
-    paddingY: 8,
-    paddingX: 17,
-    height: 34,
-  },
-  default: {
-    fontSize: 14,
-    paddingY: 11,
-    paddingX: 19,
-    height: 40,
-  },
- large: {
-    fontSize: 16,
-    paddingY: 13,
-    paddingX: 24,
-    height: 46,
-  },
-  larger: {
-    fontSize: 18,
-    paddingY: 14,
-    paddingX: 28,
-    height: 52
-  },
+const createButtonSizes = (buttonOpts = {}) => {
+  const buttons = {
+    defaults: {
+      ...defaultOpts.defaults,
+      ...buttonOpts.defaults,
+    },
+    sizes: {
+      ...defaultOpts.sizes,
+      ...buttonOpts.sizes,
+    },
+  }
+  buttons.sizes = Object.keys(buttons.sizes).reduce((output, key) => {
+    return {
+      ...output,
+      [key]: {
+        ...buttons.defaults,
+        ...defaultOpts.sizes[key],
+        ...(buttonOpts.sizes[key])
+      }
+    }
+  }, {})
+  return buttons;
 }
+
+// const buttons = createButtonSizes({
+//   defaults: {
+//     borderWidth: 2
+//   },
+//   sizes: {
+//     large: {
+//       paddingX: 40
+//     }
+//   }
+// });
+
+const buttons = createButtonSizes({});
 
 const extendedTheme = {
   ...theme,
   buttons,
-  buttonSizes,
 }
 
 export default extendedTheme;

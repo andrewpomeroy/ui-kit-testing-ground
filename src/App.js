@@ -68,7 +68,7 @@ function App() {
                     size="small">Small</Button>
                   <Box mr="1em" />
                   <Button
-                    size="default">Medium</Button>
+                    size="medium">Medium</Button>
                   <Box mr="1em" />
                   <Button
                     size="large">Large</Button>
@@ -167,9 +167,9 @@ function App() {
                   <Box mr="1em" />
                   <SoloIconButton size="small" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton size="default" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="medium" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
-                  <SoloIconButton size="default"><Icon name="X" /></SoloIconButton>
+                  <SoloIconButton size="medium"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
                   <SoloIconButton size="large" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
