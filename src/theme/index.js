@@ -103,7 +103,7 @@ const createButtonSizes = (buttonOpts = {}) => {
       [key]: {
         ...buttons.defaults,
         ...defaultOpts.sizes[key],
-        ...(buttonOpts.sizes[key])
+        ...(buttonOpts.sizes ? buttonOpts.sizes[key] : null)
       }
     }
   }, {})
