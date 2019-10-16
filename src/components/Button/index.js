@@ -61,23 +61,29 @@ const ButtonThemed = styled(ButtonNormalized)`
   ${buttonShape}
   ${color}
 `
+
 ButtonThemed.defaultProps = {
   buttonColor: 'neutral',
   size: 'default',
   shape: 'soft',
   buttonStyle: 'solid'
 }
-const Button = ({isDisabled, children, ...props}) => {
-  console.log(isDisabled);
+
+const Button = React.forwardRef(({isDisabled, children, ...props}, ref) => {
   let disabledAttr = isDisabled ? {'disabled': 'disabled'} : {};
   return (
     <ButtonThemed
+      ref={ref}
       type="button"
       {...disabledAttr}
       {...props}>
       {children}
     </ButtonThemed>)
-}
+})
+
+Button.displayName = "Button";
+
+export default Button;
 
 const iconButtonOffsetX = ".5em";
 
@@ -98,7 +104,7 @@ const IconButtonIconWrapRight = styled(IconButtonIconWrap)`
   margin-right: calc(-0.5 * ${props => props.offsetX || iconButtonOffsetX});
 `
 
-export const IconButton = ({children, iconRight, iconLeft, offsetX, ButtonComponent = Button, ...props}) => {
+export const IconButton = React.forwardRef(({children, iconRight, iconLeft, offsetX, ButtonComponent = Button, ...props}, ref) => {
   [iconLeft, iconRight].forEach((icon, key) => {
     if (!icon) return;
     icon = React.cloneElement(icon, {
@@ -108,7 +114,7 @@ export const IconButton = ({children, iconRight, iconLeft, offsetX, ButtonCompon
   });
 
   return (
-    <ButtonComponent {...props}>
+    <ButtonComponent {...props} ref={ref}>
       {!!iconLeft && 
         <IconButtonIconWrapLeft offsetX={offsetX}>
           {iconLeft}
@@ -122,35 +128,28 @@ export const IconButton = ({children, iconRight, iconLeft, offsetX, ButtonCompon
       }
     </ButtonComponent>
   )
-}
+})
 IconButton.defaultProps = {
   ButtonComponent: Button
 }
+IconButton.displayName = "IconButton";
 
-
-export const SoloIconButtonInner = ({children, ...props}) => {
+export const SoloIconButtonInner = React.forwardRef(({children, ...props}, ref) => {
   return (
-  <Button equilateral={true} {...props}>
+  <Button equilateral={true} {...props} ref={ref}>
     <IconButtonIconWrap>
       {children}
     </IconButtonIconWrap>
   </Button>
-)}
+)})
+SoloIconButtonInner.displayName = "SoloIconButton";
+
 export const SoloIconButton = styled(SoloIconButtonInner)`
   ${soloIconButtonStyle}
 `
+
 SoloIconButton.defaultProps = {
   buttonStyle: 'ghost',
   buttonColor: 'primary',
   shape: 'rounded'
 }
-  
-// export const SoloIconButton = {...props,} => (
-//   <ButtonThemed>
-
-//   </ButtonThemed>
-// )
-// export const SoloIconButton = props => IconButtonSoloStyle({...props, equilateral: true})
-
-
-export default Button;
