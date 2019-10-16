@@ -15,7 +15,7 @@ const getButtonLineHeight = lineHeight => {
  */
 const createButtonSize = (size, props) => {
   const lineHeight = getButtonLineHeight(size.lineHeight || (size.fontSize * 1.25));
-  const paddingY = ((size.height - lineHeight) / 2) - themeGet("buttons.borderWidth")(props)
+  const paddingY = ((size.height - lineHeight) / 2) - (themeGet("buttons.borderWidth")(props) || 1)
   return {
     fontSize: px(size.fontSize),
     lineHeight: px(lineHeight),
