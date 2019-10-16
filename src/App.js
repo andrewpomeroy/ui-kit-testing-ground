@@ -66,78 +66,91 @@ function App() {
                 <Flex alignItems="flex-end" mb={10}>
                   <Button
                     size="small">Small</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button
                     size="default">Medium</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button
                     size="large">Large</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button
                     size="larger">Larger</Button>
                 </Flex>
-                <Box height="10" />
                 <Flex mb={10}>
                   <Button buttonColor="neutral"
                     >Neutral</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button
                     buttonColor="primary">Primary</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonColor="success">Success</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonColor="danger">Danger</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonColor="warning">Warning</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Flex mb={10}>
                   <Button shape="rounded" buttonColor="neutral"
                     >Neutral</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button
                     shape="rounded" buttonColor="primary">Primary</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button shape="rounded" buttonColor="success">Success</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button shape="rounded" buttonColor="danger">Danger</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button shape="rounded" buttonColor="warning">Warning</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button shape="rounded" buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
                   <Button buttonStyle="hollow" buttonColor="neutral"
                     >Neutral</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="hollow"
                     buttonColor="primary">Primary</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="hollow" buttonColor="success">Success</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="hollow" buttonColor="danger">Danger</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="hollow" buttonColor="warning">Warning</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="hollow" buttonColor="pink">Pink!?</Button>
                 </Flex>
                 <Box height="10" />
                 <Flex mb={10}>
                   <Button buttonStyle="text" buttonColor="neutral"
                     >Neutral</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="text"
                     buttonColor="primary">Primary</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="text" buttonColor="success">Success</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="text" buttonColor="danger">Danger</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="text" buttonColor="warning">Warning</Button>
-                  <div style={{marginRight: '1em'}}></div>
+                  <Box mr="1em" />
                   <Button buttonStyle="text" buttonColor="pink">Pink!?</Button>
+                </Flex>
+                <Flex mb={10}>
+                  <Button
+                    isDisabled={true}>Disabled Button</Button>
+                  <Box mr="1em" />
+                  <Button
+                    isDisabled={true} shape="rounded">Disabled Button</Button>
+                  <Box mr="1em" />
+                  <Button
+                    isDisabled={true} buttonStyle="hollow">Disabled Button</Button>
+                  <Box mr="1em" />
+                  <Button
+                    isDisabled={true} buttonStyle="text">Disabled Button</Button>
+                  <Box mr="1em" />
                 </Flex>
                 <Flex mb={10}>
                   <Input />
@@ -150,11 +163,13 @@ function App() {
                   <Box mr="1em" />
                   <IconButton iconLeft={<Icon name="User" />}>Profile</IconButton>
                   <Box mr="1em" />
-                  <SoloIconButton size="small" buttonStyle="hollow" shape="soft"><Icon name="X"/></SoloIconButton>
+                  <SoloIconButton size="small" buttonStyle="solid" shape="soft"><Icon name="X"/></SoloIconButton>
                   <Box mr="1em" />
                   <SoloIconButton size="small" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
                   <SoloIconButton size="default" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
+                  <Box mr="1em" />
+                  <SoloIconButton size="default"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />
                   <SoloIconButton size="large" buttonStyle="hollow"><Icon name="X" /></SoloIconButton>
                   <Box mr="1em" />

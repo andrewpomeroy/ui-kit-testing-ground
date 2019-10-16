@@ -10,7 +10,7 @@ import soloIconButtonStyle from './soloIconButtonStyle';
 
 const transitionDuration = 50;
 
-const BasicButton = styled.button`
+const ButtonNormalized = styled.button`
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -18,50 +18,65 @@ const BasicButton = styled.button`
   text-align: center;
   ${alignItems}
   ${justifyContent}
-  padding: .9em 1.5em;
+  white-space: nowrap;
+  padding: .75em 1.5em;
   border: 1px solid;
   ${borders}
-  line-height: 1em;
+  line-height: 1.25em;
+  font-weight: 500;
   ${fontWeight}
+  font-family: inherit;
+  text-decoration: none;
+  text-transform: none;
+  background-color: transparent;
   color: inherit;
+  user-select: none;
   transition: border-color ${transitionDuration}ms linear,
     background-color ${transitionDuration}ms linear,
     transform ${transitionDuration * 2}ms ease;
-  &:active {
-    transform: scale(.98);
-  }
   &:focus {
     outline: 0;
   }
-  &[disabled] {
-    opacity: .4;
-  }
-  &:not([disabled]) {
+  /* "Not-disabled" styles */
+  ${({ disabled }) =>
+  !disabled && `
     cursor: pointer;
-  }
+    &:active {
+      transform: scale(.98);
+    }
+  `}
+  /* Disabled styles */
+  ${({ disabled }) =>
+  disabled && `
+    cursor: default;
+    opacity: .4;
+    pointer-events: none;
+  `}
 `
 
-const StyledButton = styled(BasicButton)`
+const ButtonThemed = styled(ButtonNormalized)`
   border: ${themeGet("buttons.borderWidth")}px solid;
   ${buttonStyle}
   ${buttonSize}
   ${buttonShape}
   ${color}
 `
-StyledButton.defaultProps = {
+ButtonThemed.defaultProps = {
   buttonColor: 'neutral',
   size: 'default',
   shape: 'soft',
   buttonStyle: 'solid'
 }
 const Button = ({isDisabled, children, ...props}) => {
+  console.log(isDisabled);
+  let disabledAttr = isDisabled ? {'disabled': 'disabled'} : {};
   return (
-    <StyledButton
+    <ButtonThemed
       type="button"
-      disabled={isDisabled}
+      {...disabledAttr}
       {...props}>
       {children}
-    </StyledButton>)
+    </ButtonThemed>)
 }
 
 const iconButtonOffsetX = ".5em";
@@ -131,9 +146,9 @@ SoloIconButton.defaultProps = {
 }
   
 // export const SoloIconButton = {...props,} => (
-//   <StyledButton>
+//   <ButtonThemed>
 
-//   </StyledButton>
+//   </ButtonThemed>
 // )
 // export const SoloIconButton = props => IconButtonSoloStyle({...props, equilateral: true})
 
