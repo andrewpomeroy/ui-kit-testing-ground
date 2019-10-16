@@ -60,7 +60,7 @@ otherColors.lightSeparator = 'gainsboro';
 const defaultOpts = {
   defaults: {
     borderWidth: 1,
-    lineHeight: 1.2,
+    lineHeight: 1.2, // NOTICE: These are relative units (equivalent to ems), NOT pixels! 
   },
   sizes: {
     small: {
@@ -87,6 +87,7 @@ const defaultOpts = {
 }
 
 const createButtonSizes = (buttonOpts = {}) => {
+  // Spread out base options among defaults
   const buttons = {
     defaults: {
       ...defaultOpts.defaults,
@@ -97,6 +98,7 @@ const createButtonSizes = (buttonOpts = {}) => {
       ...buttonOpts.sizes,
     },
   }
+  // Fill out each entry in `sizes` with any missing properties
   buttons.sizes = Object.keys(buttons.sizes).reduce((output, key) => {
     return {
       ...output,
