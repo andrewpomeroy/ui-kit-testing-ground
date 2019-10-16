@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
 import { borders, fontWeight } from 'styled-system';
-import themeGet from '@styled-system/theme-get';
 import { color, alignItems, justifyContent } from '@windsor/ui-kit-styled-system';
-import buttonSize from './buttonSize';
-import buttonShape from './buttonShape';
-import buttonStyle from './buttonStyle';
-import soloIconButtonStyle from './soloIconButtonStyle';
+import { buttonSizeVariant, buttonShapeVariant, buttonStyleVariant, soloIconButtonStyleVariant } from './variants';
 
 const transitionDuration = 50;
 
@@ -55,9 +51,9 @@ const ButtonNormalized = styled.button`
 `
 
 const ButtonThemed = styled(ButtonNormalized)`
-  ${buttonStyle}
-  ${buttonSize}
-  ${buttonShape}
+  ${buttonStyleVariant}
+  ${buttonSizeVariant}
+  ${buttonShapeVariant}
   ${color}
 `
 
@@ -144,7 +140,7 @@ export const SoloIconButtonInner = React.forwardRef(({children, ...props}, ref) 
 SoloIconButtonInner.displayName = "SoloIconButton";
 
 export const SoloIconButton = styled(SoloIconButtonInner)`
-  ${soloIconButtonStyle}
+  ${soloIconButtonStyleVariant}
 `
 
 SoloIconButton.defaultProps = {

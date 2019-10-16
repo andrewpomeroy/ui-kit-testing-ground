@@ -2,8 +2,6 @@ import createTheme from "@windsor/ui-kit-theme";
 import Color from 'color';
 
 export const baseColors = {
-  // yellow: '#f6f9d0',
-  // yellow: '#ffc30f',
   yellow: '#ffd945',
   blue: '#2b88fe',
   turquoise: '#5df0f6',
@@ -14,7 +12,6 @@ export const baseColors = {
   fadedBlue: '#5b86b0',
   veryDarkBlue: '#16427d',
   violet: 'hsl(219.2, 100%, 64.6%)',
-  // red: '#fa5252',
   red: '#ff3558',
   pink: '#ff3c7e',
   nearWhite: '#f8f9fa',

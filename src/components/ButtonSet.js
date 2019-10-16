@@ -10,7 +10,7 @@ const ButtonSetStyle = styled.div`
   }
 `
 
-const ButtonSet = ({children, style, ...props}) => {
+const ButtonSet = ({children}) => {
   return (
     <ButtonSetStyle>
       {children && children.length 
