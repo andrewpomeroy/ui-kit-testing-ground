@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 import Button from './Button';
 import { IconButtonIconWrap } from './IconButton';
 import { soloIconButtonStyleVariant } from '../variants';

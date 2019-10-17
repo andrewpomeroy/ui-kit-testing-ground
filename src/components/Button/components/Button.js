@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 import { borders, fontWeight } from 'styled-system';
 import { color, alignItems, justifyContent } from '@windsor/ui-kit-styled-system';
 import { buttonSizeVariant, buttonShapeVariant, buttonStyleVariant } from '../variants';

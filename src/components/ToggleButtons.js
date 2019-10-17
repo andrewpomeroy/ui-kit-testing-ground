@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useContext, useEffect, useRef } from 'react';
-import styled from '@emotion/styled/macro';
+import React, { useState, useMemo, useContext, useRef } from 'react';
+import styled from '@emotion/styled';
 import ButtonSet from './ButtonSet';
 import Button from './Button';
 import uuid4 from 'uuid4';
@@ -37,8 +37,6 @@ export const ToggleButton = React.forwardRef(({style, children, value}, ref) => 
   const {name, activeValue, setActiveValue} = useContext(ToggleButtonsContext);
   const isActive = activeValue === value;
   const uuid = useRef(uuid4());
-
-  console.log({name, activeValue, setActiveValue});
 
   return (
     <Button ref={ref} as="label" style={style} buttonStyle={isActive ? 'solid' : 'hollow'}>

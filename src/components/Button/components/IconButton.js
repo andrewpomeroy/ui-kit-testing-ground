@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 import Button from './Button';
 
 const iconButtonOffsetX = ".5em";

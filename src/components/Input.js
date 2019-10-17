@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Color from 'color';
-import styled from "@emotion/styled/macro";
+import styled from "@emotion/styled";
 import { otherColors } from "../theme";
 
 const inputStyleProps = {

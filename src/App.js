@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import { Box, Flex } from '@windsor/ui-kit-core';
